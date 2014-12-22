@@ -76,9 +76,9 @@ servername=$( findup $PWD ${REPOMARKERS[@]} | tr "[:lower:]" "[:upper:]" )
 if [[ "$servername" ]]; then
     opts="--servername $servername"
     if checktabs; then
-        opts="$args --remote-tab-silent"
+        opts="$opts --remote-tab-silent"
     else
-        opts="$args --remote-silent"
+        opts="$opts --remote-silent"
     fi
 fi
-$VIMSTART $args "$@"
+$VIMSTART $opts "$@"
