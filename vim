@@ -73,6 +73,9 @@ checktabs () {
 }
 
 servername=$( findup $PWD ${REPOMARKERS[@]} | tr "[:lower:]" "[:upper:]" )
+if [[ ! "$servername" && checktabs ]]; then
+    servername="VIM"
+fi
 if [[ "$servername" ]]; then
     opts="--servername $servername"
     if checktabs; then
