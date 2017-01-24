@@ -1,3 +1,4 @@
+
 # Create separate Vim instance for each Git/Mercurial/SVN project
 
 This script, being used as a wrapper around Vim invocation, creates a separate Vim instance for separate Git/Hg or SVN project. New files from such project are opened in the same instance as separate tabs.
